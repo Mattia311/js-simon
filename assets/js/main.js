@@ -2,44 +2,49 @@
 
 
 
+
 var number = [];
+var typeNumber = []
+var numberUguali = []
+setTimeout (showNumber, 3000)
 while(number.length < 5){
     
-    var numberRandom = Math. floor(Math. random() * 10) + 1;
+    var numberRandom = Math. floor(Math. random() * 100) + 1;
     
-    if(number.indexOf(numberRandom) === -1) number. push(numberRandom);
+    if(number.indexOf(numberRandom) === -1) number.push(numberRandom);
     
 }
 
 const numeri = alert(number)
+console.log('i numeri generati casualmente sono i seguenti:', number);
 
-setTimeout (showNumber, 3000)
 
-typeNumber = []
 
 function showNumber () {
-    const askNumber1 = parseInt(prompt('Inserisci un numero'))
-    const askNumber2 = parseInt(prompt('Inserisci un numero'))
-    const askNumber3 = parseInt(prompt('Inserisci un numero'))
-    const askNumber4 = parseInt(prompt('Inserisci un numero'))
-    const askNumber5 = parseInt(prompt('Inserisci un numero'))
-    console.log(askNumber1,askNumber2,askNumber3,askNumber4,askNumber5);
-    typeNumber.push(askNumber1,askNumber2,askNumber3,askNumber4,askNumber5)
-    if (number = typeNumber) {
-         alert('Complimenti, hai indovinato tutti i numeri')
-    }
-    else {
-         alert('non hai vinto')
-    }
-    console.log(typeNumber);
-}
-
-
-
-
-
-/*for (let index = 0; index < 5; index++) {
     
-   const askNumber = parseInt(prompt('Inserisci un numero'))
-   console.log(askNumber);
-}*/
+    for (var i=1; i <= 5; i++) {
+        var numero = parseInt(prompt("Inserisci un numero"));
+        typeNumber.push(numero);
+    }
+    console.log('hai inserito i numeri:',typeNumber);
+
+    for (var i=0; i <= typeNumber.length; i++) {
+    if(number.includes(typeNumber[i])){
+        numberUguali.push(typeNumber[i]);
+    }
+}
+    
+    
+    /*console.log(typeNumber);*/
+    /*console.log(numberUguali);*/
+    if(numberUguali.length > 1){
+        console.log("Sono stai individuati",numberUguali.length,'numeri','e sono rispettivamente:', numberUguali)
+
+        
+    } else if (numberUguali.length = 1) {
+        console.log("è stato individuato",numberUguali.length,'numero','ed è:', numberUguali)
+
+    }else if (numberUguali.length < 1) {
+        console.log('Non è stato individuato nessun numero');
+    }
+}
