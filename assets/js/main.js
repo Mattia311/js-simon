@@ -6,7 +6,7 @@
 var number = [];
 var typeNumber = []
 var numberUguali = []
-setTimeout (showNumber, 3000)
+setTimeout (showNumber, 30000)
 while(number.length < 5){
     
     var numberRandom = Math. floor(Math. random() * 100) + 1;
